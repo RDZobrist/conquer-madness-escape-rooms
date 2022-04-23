@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../../components/NavBar/NavBar.component';
 import { GalleryScreenContainer, TitleContainer } from './Gallery.stlyes';
 
 
