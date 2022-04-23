@@ -17,7 +17,6 @@ import {
 } from "./NavBar.styles";
 import LogoImg from "../../assets/images/conquer-logo-1.png";
 import { YouTubeVideo } from "../YouTubeiFrame/YouTubeiFrame.component";
-import { CustomButton } from "../CustomButton/CustomButton.styles";
 
 const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
