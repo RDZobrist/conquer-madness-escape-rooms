@@ -5,6 +5,8 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.component';
 import Spinner from './components/Spinner/Spinner.component';
 
 import HomePageScreen from './screens/HomePage/HomePage.screen';
+import  GlobalStyle  from './global.styles';
+import Navbar from './components/NavBar/NavBar.component';
 const EscapeRooms = lazy(() => import('./screens/EscapeRooms/EscapeRooms.screen'));
 const BirthdayParties = lazy(() => import('./screens/BirthdayParties/BirthdayParties.screen'));
 const FAQs = lazy(() => import('./screens/FAQ/FAQ.screen'));
@@ -13,10 +15,12 @@ const Hours = lazy(() => import('./screens/Hours/Hours.screen'));
 const Reviews = lazy(() => import('./screens/Reviews/Reviews.screen'));
 const CorporateEvents = lazy(() => import('./screens/CorporateEvents/CorporateEvents.screen'));
 const Contact = lazy(() => import('./screens/Contact/Contact.screen'));
+const SpecialEvents = lazy(() => import('./screens/SpecialEvents/SpecialEvents.screen'));
 function App() {
   return (
-    <Router>
-      <Header />
+    <>
+    
+      <Navbar />
       <ErrorBoundary>
         <Suspense fallback={<Spinner />}>
           <Routes>
@@ -29,10 +33,11 @@ function App() {
             <Route exact path='/reviews' element={<Reviews />} />
             <Route exact path='/hours' element={<Hours />} />
             <Route exact path='/gallery' element={<Gallery />} />
+            <Route exact path='/special-events' element={<SpecialEvents />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>
-    </Router>
+    </>
   );
 }
 

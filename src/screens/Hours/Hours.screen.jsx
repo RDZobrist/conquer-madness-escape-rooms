@@ -1,11 +1,11 @@
 import React from 'react';
-import { HoursScreenContainer } from './Hours.styles';
+import { HoursScreenContainer, TitleContainer } from './Hours.styles';
 
 
  const HoursScreen = () => {
     return (
         <HoursScreenContainer>
-            <h2>COMING SOON...</h2>
+                <TitleContainer>COMING SOON!</TitleContainer>
         </HoursScreenContainer>
     )
 };

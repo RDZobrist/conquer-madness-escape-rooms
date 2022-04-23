@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {CorporateEventsScreenContainer} from './CorporateEvents.styles';
+import {CorporateEventsScreenContainer, TitleContainer} from './CorporateEvents.styles';
  const CorporateEventsScreen = () => {
     return (
         <CorporateEventsScreenContainer>
-            <h1>Coming soon</h1>
+            <TitleContainer>COMING SOON!</TitleContainer>
         </CorporateEventsScreenContainer>
     )
 };

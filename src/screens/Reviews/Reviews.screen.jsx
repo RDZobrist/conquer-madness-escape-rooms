@@ -1,11 +1,11 @@
 import React from 'react';
-import { ReviewsScreenContainer } from './Reviews.styles';
+import { ReviewsScreenContainer, TitleContainer } from './Reviews.styles';
 
 
- const ReviewsScreen = () => {
+const ReviewsScreen = () => {
     return (
         <ReviewsScreenContainer>
-            <h2>COMING SOON</h2>
+            <TitleContainer>COMING SOON!</TitleContainer>
         </ReviewsScreenContainer>
     )
 };

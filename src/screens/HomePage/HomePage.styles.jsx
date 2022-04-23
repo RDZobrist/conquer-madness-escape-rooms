@@ -1,7 +1,21 @@
 import styled from 'styled-components';
-
+import px2vw from '../../utilities/px2vw';
 export const HomePageContainer = styled.div`
-margin-left: 12.5%;
-margin-top: 10%;
-font-size: 42px;
+display: inline-block;
+flex-wrap: wrap;
+justify-content: center;
+max-width: 100%;
 `;
+
+
+
+export const TitleContainer = styled.h1`
+font-size: 100%;
+text-align: justify-center;
+margin-left: 40vw;
+@media (min-width: 1024px) {
+  font-size: 1.5rem;
+}
+`;
+
+

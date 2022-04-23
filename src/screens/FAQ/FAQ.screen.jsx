@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { FAQRoomsScreenContainer } from './FAQ.styles';
+import { FAQRoomsScreenContainer, TitleContainer } from './FAQ.styles';
  const FAQScreen = () => {
     return (
       <FAQRoomsScreenContainer>
-          <h1>COMING SOON</h1>
+            <TitleContainer>COMING SOON!</TitleContainer>
       </FAQRoomsScreenContainer>
     )
 };

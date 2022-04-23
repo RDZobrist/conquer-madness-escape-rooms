@@ -1,12 +1,21 @@
 import styled from 'styled-components';
+import px2vw from '../../utilities/px2vw';
 
 export const GalleryScreenContainer = styled.div`
-margin-left: 20px;
-margin-top: 2.5%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin: ${px2vw(32)};
+max-width: 100%;
+
 `;
 
 export const TitleContainer = styled.h1`
-margin-left:25%;
-font-size: 42px;
-`;
+font-size: 2rem;
+text-align: center;
+margin-top: 50vh;
 
+@media (min-width: 1024px) {
+  font-size: 1.5rem;
+}
+`;

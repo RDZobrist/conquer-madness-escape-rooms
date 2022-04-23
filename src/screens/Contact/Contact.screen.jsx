@@ -1,11 +1,11 @@
 import React from 'react';
-import { ContactScreenContainer } from './Contact.styles';
+import { ContactScreenContainer, TitleContainer } from './Contact.styles';
 
 
  const ContactScreen = () => {
     return (
         <ContactScreenContainer>
-            <h1>COMING SOON!!!</h1>
+            <TitleContainer>COMING SOON!</TitleContainer>
         </ContactScreenContainer>
 
     )

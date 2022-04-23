@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import  Logo   from '../../assets/images/conquer-logo-1.png';
 
 export const HeaderContainer = styled.div`
-  height: 70px;
+  height: 75px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -13,12 +13,9 @@ export const HeaderContainer = styled.div`
     height: 60px;
     padding: 10px;
     margin-bottom: 20px;
-  }
+  } 
 `;
-const OptionContainerStyles = css` 
-    padding: 10px 15px;
-    cursor: pointer;
-`;
+
 export const LogoContainer = styled(Link)`
   height: 70px ;
   width: 70px;
@@ -31,9 +28,11 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const OptionsContainer = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
+  padding: 10px 15px;
+  cursor: pointer;
   align-items: center;
   justify-content: flex-end;
   @media screen and (max-width: 800px) {
