@@ -52,7 +52,7 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled(Link)`
   color: hsla(240, 37%, 0%, 0.76);
-  font-size: 1.5rem;
+  font-size: .95rem;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 17px;
@@ -66,7 +66,7 @@ export const NavbarLink = styled(Link)`
 `;
 export const NavbarAnchorLink = styled.a`
 color: #000;
-font-size: 1.5rem;
+font-size: .95rem;
 font-family: Arial, Helvetica, sans-serif;
 text-decoration: none;
 margin: 17px;

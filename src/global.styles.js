@@ -1,8 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import px2vw from "./utilities/px2vw";
 
- const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
  body {
+    background-color: #FCFCFC; 
     font-family: 'Open Sans Condensed';
 
     padding: 20px 40px;
