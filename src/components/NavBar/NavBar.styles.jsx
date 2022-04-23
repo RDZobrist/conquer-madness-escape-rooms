@@ -55,7 +55,7 @@ export const NavbarLink = styled(Link)`
   font-size: .95rem;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  margin: 17px;
+  margin: 12x;
   &.${props => props.activeClassName} {
     color: red;
   }
