@@ -52,10 +52,10 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled(Link)`
   color: hsla(240, 37%, 0%, 0.76);
-  font-size: .95rem;
+  font-size: .77rem;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  margin: 12x;
+  margin: 15px;
   &.${props => props.activeClassName} {
     color: red;
   }
@@ -66,10 +66,10 @@ export const NavbarLink = styled(Link)`
 `;
 export const NavbarAnchorLink = styled.a`
 color: #000;
-font-size: .95rem;
+font-size: .77rem;
 font-family: Arial, Helvetica, sans-serif;
 text-decoration: none;
-margin: 17px;
+margin: 12px;
 &.${props => props.activeClassName} {
     color: red;
   }
@@ -116,7 +116,7 @@ export const OpenLinksButton = styled.button`
   background: none;
   border: none;
   color: #000;
-  margin-top: 1.5%;
+  margin-top: 4.444vh;
   margin-right: 40px;
   font-size: 45px;
   cursor: pointer;
@@ -137,15 +137,17 @@ export const NavbarExtendedContainer = styled.div`
 
 export const CustomButtonContainer = styled.div`
 width: '17.5vw';
-  background-color: 'red';
+background-color: 'red';
  color:'#000';
-  width: '17.5vw';
+ font-size:'1.45em';
+
   
 `;
 export const YouTubeContainer = styled.div`
 display: block;
 margin-top: 10vh;
 width: 100vw;
+margin-left: 25vw;
 @media (max-width: 450px) {
   width: 0vw;
 }

@@ -5,7 +5,7 @@ const TypographyUI = styled.p`
   background-color: ${(props) =>
     props.bgColor ? props.bgColor : 'transparent'};
   color: ${(props) =>
-    props.color ? props.color : props.theme.dark};
+    props.color ? props.color : 'black'};
   font-size: ${(props) => (props.size ? props.size : 22)}px;
   font-weight: ${(props) =>
     props.fontWeight ? props.fontWeight : 100};
@@ -16,7 +16,7 @@ const TypographyUI = styled.p`
     props.paddingBottom ? props.paddingBottom : 0}px;
   padding-left: ${(props) => (props.paddingLeft ? props.paddingLeft : 0)}px;
   margin-top: ${(props) => (props.mt ? props.mt : 0)}px;
-  margin-left: ${(props) => (props.ml ? props.ml : 0)}px;
+  margin-left: ${(props) => (props.ml ? props.ml : '50vw')}px;
   margin-right: ${(props) => (props.mr ? props.mr : 0)}px;
   margin-bottom: ${(props) => (props.mb ? props.mb : 0)}px;
   text-transform: ${(props) =>

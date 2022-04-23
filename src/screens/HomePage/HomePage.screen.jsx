@@ -7,14 +7,18 @@ const HomePageScreen = () => {
 
     return (
         <HomePageContainer>
-            <TitleContainer>Conquer Madness</TitleContainer>
-            <TitleContainer style={ {marginLeft: '33vw'}}>SOUTH DAKOTA'S PREMIER ESCAPE ROOMS</TitleContainer>
-            <Typography fWrap width={'50vw'} ml={100} size={23} textAlign={'center'} fontWeight={400}>
-                Hollywood Quality Set Designs & Special Effects
-            </Typography>
-            <Typography fWrap width={'50vw'} ml={200}>
-WE'RE BACK & OPEN FOR BUSINESS
-Enjoy Clean & Private Escape Room Experiences</Typography>
+            <div style={{ marginRight: '25vw' }}>
+                <Typography fontWeight={900} style={{ marginLeft: '28.5vw', marginBottom: '20px' }} size={55} textAlign={'center'} >
+                    Conquer Madness</Typography>
+                <Typography fontWeight={100} style={{ marginLeft: '28.5vw', marginBottom: '20px' }} size={29} textAlign={'center'} >
+                    SOUTH DAKOTA'S PREMIER ESCAPE ROOMS</Typography>
+                <Typography fontWeight={100} style={{ marginLeft: '28.5vw' }} size={29} textAlign={'center'} >
+                    Hollywood-Quality Set Designs & Special Effects!<br />
+                    WE'RE BACK & OPEN FOR BUSINESS!<br />
+                    Enjoy Clean & Private Escape Room Experiences!<br />
+                </Typography>
+            </div>
+
         </HomePageContainer>
     );
 };

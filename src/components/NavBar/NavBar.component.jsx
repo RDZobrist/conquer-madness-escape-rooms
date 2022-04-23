@@ -35,24 +35,24 @@ const Navbar = () => {
 
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
-      
+
       <NavbarInnerContainer>
         <LeftContainer>
-        <a href='/'><Logo src={LogoImg}></Logo></a>
+          <a href='/'><Logo src={LogoImg}></Logo></a>
         </LeftContainer>
-        
+
         <RightContainer>
-        <NavbarLinkContainer>
-          <NavbarLink to='/escape-rooms'>Escape Rooms</NavbarLink>
-        <NavbarLink to='/special-events'>Special Events</NavbarLink>
-        <NavbarLink to='/birthday-parties'>Birthday Parties</NavbarLink>
-        <NavbarLink to='/corporate-events'>Corporate Events</NavbarLink>
-        <NavbarLink to='/faq'>FAQs</NavbarLink>
-        <NavbarLink to='/hours'>Hours</NavbarLink>
-        <NavbarLink to='/gallery'>Gallery</NavbarLink>
-        <NavbarAnchorLink href='https://airmadnesspos.com/airmadness/onlinewaiver/waiver.php'>Waiver</NavbarAnchorLink>
-        <NavbarLink to='/reviews'>Reviews</NavbarLink>
-        <NavbarLink to='/contact'>Contact</NavbarLink>
+          <NavbarLinkContainer>
+            <NavbarLink to='/escape-rooms'>Escape Rooms</NavbarLink>
+            <NavbarLink to='/special-events'>Special Events</NavbarLink>
+            <NavbarLink to='/birthday-parties'>Birthday Parties</NavbarLink>
+            <NavbarLink to='/corporate-events'>Corporate Events</NavbarLink>
+            <NavbarLink to='/faq'>FAQs</NavbarLink>
+            <NavbarLink to='/hours'>Hours</NavbarLink>
+            <NavbarLink to='/gallery'>Gallery</NavbarLink>
+            <NavbarAnchorLink href='https://airmadnesspos.com/airmadness/onlinewaiver/waiver.php'>Waiver</NavbarAnchorLink>
+            <NavbarLink to='/reviews'>Reviews</NavbarLink>
+            <NavbarLink to='/contact'>Contact</NavbarLink>
             <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -64,8 +64,8 @@ const Navbar = () => {
           </NavbarLinkContainer>
 
         </RightContainer>
-     
-      
+
+
 
       </NavbarInnerContainer>
       {extendNavbar && (
@@ -85,19 +85,19 @@ const Navbar = () => {
 
 
         </NavbarExtendedContainer>
-        
+
       )}
-  
-        <YouTubeContainer>
-          <YouTubeVideo />
-        </YouTubeContainer>
 
-        <div style={{boxSizing: 'border-box' }}>
+      <YouTubeContainer>
+        <YouTubeVideo />
+      </YouTubeContainer>
 
-<CustomButton style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '30.33vw'}} onClick={handleBookNowClick} >Book Now</CustomButton>
-<CustomButton style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '1.5vw'}} onClick={handlePhoneNumberClick}>(605) 702-4243</CustomButton>
+      <div style={{ boxSizing: 'border-box',padding: 20, flexDirection: 'row', marginLeft: '27vw' }}>
 
-</div>
+        <CustomButton style={{ display: 'inline-block', fontSize: '.92rem', width: '20vw', backgroundColor: 'red', color: '#ffffff', fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginRight: '20px' }} onClick={handleBookNowClick} >Book Now</CustomButton>
+        <CustomButton style={{ display: 'inline-block', fontSize: '.92rem', width: '20vw', backgroundColor: 'red', color: '#ffffff', fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '20px' }} onClick={handlePhoneNumberClick}>(605) 702-4243</CustomButton>
+
+      </div>
 
     </NavbarContainer>
   );
