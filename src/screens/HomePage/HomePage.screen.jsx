@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomePageContainer, TitleContainer } from './HomePage.styles';
+import { HomePageContainer } from './HomePage.styles';
 import Typography from '../../components/Typograpgy/Typography.component';
 
 
