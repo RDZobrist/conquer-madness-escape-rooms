@@ -4,6 +4,7 @@ export const HomePageContainer = styled.div`
 display: inline-block;
 flex-wrap: wrap;
 justify-content: center;
+margin: ${px2vw(34)};
 max-width: 100%;
 `;
 

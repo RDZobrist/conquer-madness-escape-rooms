@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import Header from './components/Header/Header.component';
-import { Routes, Route, BrowserRouter as Router, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.component';
 import Spinner from './components/Spinner/Spinner.component';
 
@@ -19,7 +18,7 @@ const SpecialEvents = lazy(() => import('./screens/SpecialEvents/SpecialEvents.s
 function App() {
   return (
     <>
-    
+    <GlobalStyle />
       <Navbar />
       <ErrorBoundary>
         <Suspense fallback={<Spinner />}>

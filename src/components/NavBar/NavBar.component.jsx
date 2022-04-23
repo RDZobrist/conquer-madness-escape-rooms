@@ -17,7 +17,7 @@ import {
 } from "./NavBar.styles";
 import LogoImg from "../../assets/images/conquer-logo-1.png";
 import { YouTubeVideo } from "../YouTubeiFrame/YouTubeiFrame.component";
-import { CustomButtonContainer } from "../CustomButton/CustomButton.styles";
+import { CustomButton } from "../CustomButton/CustomButton.styles";
 
 const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
@@ -95,8 +95,8 @@ const Navbar = () => {
 
         <div style={{boxSizing: 'border-box' }}>
 
-<CustomButtonContainer style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '30.33vw'}} onClick={handleBookNowClick} >Book Now</CustomButtonContainer>
-<CustomButtonContainer style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '1.5vw'}} onClick={handlePhoneNumberClick}>(605) 702-4243</CustomButtonContainer>
+<CustomButton style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '30.33vw'}} onClick={handleBookNowClick} >Book Now</CustomButton>
+<CustomButton style={{display:'inline-block',fontSize: '.82rem',width: '17vw', backgroundColor: 'red', color:'#ffffff',fontWeight: 'bolder', opacity: '.92', marginTop: '.026vh', marginLeft: '1.5vw'}} onClick={handlePhoneNumberClick}>(605) 702-4243</CustomButton>
 
 </div>
 

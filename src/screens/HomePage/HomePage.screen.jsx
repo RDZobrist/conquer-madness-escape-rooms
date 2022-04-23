@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import CustomButton from '../../components/CustomButton/CustomButton.component';
-import { YouTubeVideo } from '../../components/YouTubeiFrame/YouTubeiFrame.component';
-import { HomePageContainer, TitleContainer, miniTitleContainer } from './HomePage.styles';
+import React from 'react';
+import { HomePageContainer, TitleContainer } from './HomePage.styles';
+import Typography from '../../components/Typograpgy/Typography.component';
 
 
 const HomePageScreen = () => {
@@ -9,7 +8,13 @@ const HomePageScreen = () => {
     return (
         <HomePageContainer>
             <TitleContainer>Conquer Madness</TitleContainer>
-            <TitleContainer>SOUTH DAKOTA'S PREMIER ESCAPE ROOMS</TitleContainer>
+            <TitleContainer style={ {marginLeft: '33vw'}}>SOUTH DAKOTA'S PREMIER ESCAPE ROOMS</TitleContainer>
+            <Typography fWrap width={'50vw'} ml={100} size={23} textAlign={'center'} fontWeight={400}>
+                Hollywood Quality Set Designs & Special Effects
+            </Typography>
+            <Typography fWrap width={'50vw'} ml={200}>
+WE'RE BACK & OPEN FOR BUSINESS
+Enjoy Clean & Private Escape Room Experiences</Typography>
         </HomePageContainer>
     );
 };
