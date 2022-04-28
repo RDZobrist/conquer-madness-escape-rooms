@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 //Pages
 
-const Footer = lazy(()=>import('./components/Footer/Footer'));
+const Footer = lazy(()=>import('./components/Footer/Footer.component'));
 const Home = lazy(() => import('./screens/Home')); 
 const Gallery = lazy(() => import('./screens/Gallery/Gallery.screen'));
 const BirthdayParties = lazy(() => import('./screens/BirthdayParties/BirthdayParties.screen'));
@@ -18,14 +18,9 @@ function App() {
 		
 
 		<Router>
-
-
 			<GlobalStyle />
-
-
 			<Navbar />
 			<Switch>
-
 				<Route exact path='/' component={Home } />
 				<Route exact path='/gallery' component={Gallery} />
 

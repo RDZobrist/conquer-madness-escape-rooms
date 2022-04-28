@@ -8,8 +8,9 @@ import {
 	FooterAddress,
 	FooterColumn,
 	FooterGrid,
-	FooterHours
-} from './FooterStyles';
+	FooterHours,
+	FooterContainer
+} from './Footer.styles';
 import { footerData, footerSocialData } from '../../data/FooterData';
 import { Row, Section } from '../../globalStyles';
 
@@ -22,7 +23,7 @@ function Footer() {
 		});
 	};
 	return (
-		<Section padding="1rem 0 1rem 0">
+		<FooterContainer >
 			<FooterWrapper>
 				<FooterGrid justify="space-between">
 					<FooterColumn id="footerLogo">
@@ -65,7 +66,7 @@ function Footer() {
 
 				<FooterRights><a href='https://nltsf.com/'>Next Level Technology SF & Conquer Escape Rooms © 2022</a></FooterRights>
 			</FooterWrapper>
-		</Section>
+		</FooterContainer>
 	);
 }
 

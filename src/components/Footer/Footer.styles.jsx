@@ -5,12 +5,16 @@ import { Column, Row } from '../../globalStyles';
 export const FooterContainer = styled.div`
 	background-color: #101522;
 	padding: 4rem 0 2rem 0;
+	min-height: calc(5vh - 150px);
+
 `;
 
 export const FooterWrapper = styled.div`
 	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
+	max-height: 150px;
+	min-height: 150px
 `;
 
 export const FooterSubscription = styled.section`

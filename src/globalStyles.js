@@ -23,6 +23,7 @@ export const Container = styled.div`
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 50px;
+	margin-top: ${({ mt }) => (mt ? mt : '')};
 
 	@media screen and (max-width: 960px) {
 		padding: 0 30px;

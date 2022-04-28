@@ -6,6 +6,7 @@ export const HeroSection = styled.section`
 	background-position: center;
 	background-size: cover;
 	padding-top: clamp(70px, 25vh, 220px);
+	margin-bottom: 100vh;
 	box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 	@media screen and (max-width: 400px) {
 		max-width: 400px;
