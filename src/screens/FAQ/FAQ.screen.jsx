@@ -4,7 +4,7 @@ import ExpandedDiv from '../../components/ExpandedDiv/ExpandedDiv.component';
 import { Heading } from '../../globalStyles';
 const FAQScreen = () => {
     return (
-        <Container>
+        <Container reverse>
             <Section inverse reverse>
             <Heading inverse>Frequently Asked Questions</Heading>
             <div>

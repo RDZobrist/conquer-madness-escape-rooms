@@ -68,7 +68,7 @@ const Navbar = () => {
 
 }
 						
-						<AnchorLink href='' style={{textDecoration: 'none'}}>Waiver</AnchorLink>
+						<AnchorLink href='https://airmadnesspos.com/airmadness/onlinewaiver/waiver.php' style={{textDecoration: 'none'}}>Waiver</AnchorLink>
 
 
 					</NavMenu>

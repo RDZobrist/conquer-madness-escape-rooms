@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
 
+import { useLocation } from 'react-router-dom';
 export const Nav = styled.nav`
 	background: transparent;
 	margin-bottom: -80px;
@@ -99,18 +100,21 @@ export const NavItem = styled.li`
 	}
 `;
 export const AnchorLink = styled.a`
-color: #fff;
+color: indianred;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 100%;
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 2.25px;
+
 
 	&:hover {
-		color: indianred;
-		transition: 0.333s ease-out;
+		transition: all 0.3s ease;
+		font-weight:900;
 	}
-
 	@media screen and (max-width: 960px) {
 		text-align: center;
 		padding: 2rem;
@@ -119,24 +123,27 @@ color: #fff;
 
 		&:hover {
 			color: indianred;
-			transition: all 0.333s ease-out;
+			transition: 0.333s ease-out;
 			text-decoration: none;
 		}
 	}
 `;
 
 export const NavLinks = styled.span`
-	color: #fff;
+	color: indianred;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 100%;
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 2.25px;
 
 
 	&:hover {
-		color: indianred;
 		transition: all 0.3s ease;
+		font-weight:900;
 	}
 	@media screen and (max-width: 960px) {
 		text-align: center;

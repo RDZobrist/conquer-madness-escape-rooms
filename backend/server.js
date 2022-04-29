@@ -10,7 +10,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-
+app.use((request, response, next) => {
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Content-Type");
+    next();
+  });
 const corsOpts = {
     origin: '*',
 
@@ -27,15 +31,18 @@ app.use(cors(corsOpts));
 
 
 app.post('/send-email',(req, res)=>{
-    console.log(req.body);
-    // res.sendStatus(200)
-    // let mailDetails = {
-    //     to: 'rddzobrist@gmail.com',
-    //     subject: 'TEST',
-    //     html: '<p> THIS IS JUST A TEST</p>'
-    // }
-    // mail.mail(mailDetails)
-})
+    let {name, phoneNumber, customerEmail, emailBody} = req.body;
+    let mailDetails = {
+        to: ['data@conquerescaperooms.com', 'rddzobrist@gmail.com'],
+        subject: 'Customer Request For Information',
+        html: `<h6>Customer Name: ${name}</h6><br/><h6>Customer Email: ${customerEmail}</h6><br/><h6>Customer Phone #: ${phoneNumber}</h6><br/><h6>Customer Message: ${emailBody}</h6><br/>`
+    }
+    mail.mail(mailDetails);
+    return res.status(200).json({ success: `Email sent successfully`})
+    .catch(err => {
+        return res.status(400).json({ errors: err });
+    })
+});
 
 app.get('/', (req, res) => {
     res.send('Good mornning')

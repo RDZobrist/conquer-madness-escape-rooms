@@ -81,10 +81,10 @@ export const Img = styled(motion.img)`
 
 export const Heading = styled(motion.h2)`
 	margin-bottom: 24px;
-	font-size: 3rem;
-	line-height: 1.1;
+	font-size: ${({size}) => (size?size:'2.25rem')};
+	line-height: .981;
 	font-weight: 600;
-	margin-top: ${({ mt }) => (mt ? mt : '0' )}px;
+	margin-top: ${({ mt }) => (mt ? mt : '20' )}px;
 	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
 
 	@media screen and (max-width: 768px) {
@@ -108,7 +108,7 @@ export const ContentButton = styled(motion.button)`
 	letter-spacing: 1.54px;
 	text-transform: uppercase;
 	cursor: pointer;
-	background: none;
+	background-color: '#0c4577';
 	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
 
 	border-radius: 4px;

@@ -18,8 +18,9 @@ function App() {
 		
 
 		<Router>
+						<Navbar />
+
 			<GlobalStyle />
-			<Navbar />
 			<Switch>
 				<Route exact path='/' component={Home } />
 				<Route exact path='/gallery' component={Gallery} />

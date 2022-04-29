@@ -6,9 +6,10 @@ const ExpandedDiv = (faq) => {
     const [showExtraContent, toggleShowExtraContent] = useState(false);
     return (
     
-            <Fragment style={{display: 'block', float: 'right'}}>
-                <OuterContent>{faq.question}</OuterContent>
-                <ToggleButton onClick={()=>toggleShowExtraContent(!showExtraContent)}/>
+            <Fragment style={{display: 'block', float: 'right', minWidth:'125%'}}>
+                <ToggleButton onClick={()=>toggleShowExtraContent(!showExtraContent)}>
+                    <OuterContent>{faq.question}</OuterContent>
+                </ToggleButton>
                 {showExtraContent ?
                     <InnerContent>{faq.answer}</InnerContent>
                     :

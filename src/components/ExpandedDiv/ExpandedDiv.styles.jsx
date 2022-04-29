@@ -2,36 +2,32 @@ import styled from 'styled-components';
 
 export const ToggleButton = styled.span`
 display: block;
-
   font-weight: bold;
   font-family: monospace;
   font-size: 2.2rem;
   text-transform: uppercase;
   text-align: center;
-  max-width: 75px;
-  max-height: 75px;
-
-  padding: 1rem;
-
-  color: #ffffff;
-  background: #0d4577;
-
+  max-width: 100vw;
+  max-height: 400px;
+  padding: .5rem;
+  color: indianred;
+  background: dodgerblue;
   cursor: pointer;
-
   border-radius: 7px;
-  transition: all 0.25s ease-out;
+  transition: all 0.45s ease-out;
 
-  &&:before {
-    content: ' ';
+  &&:after {
+    content: '';
     display: inline-block;
   
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent;
+    border-left: 12.5px solid currentColor;
   
     vertical-align: middle;
-    margin-right: .7rem;
-    transform: translateY(-2px);
+    margin-left: 2.7rem;
+    margin-top: 20px;
+    transform: translateY(-12px);
   
     transition: transform .2s ease-out;
   }
@@ -40,8 +36,7 @@ display: block;
 
 export const InnerContent = styled.div`
 background: lightblue;
-border-bottom: 2.2px solid #fff;
-
+border-bottom: .92px solid #0d4577;
 border-bottom-left-radius: 7px;
 border-bottom-right-radius: 7px;
 padding: 1.5rem 1rem;
@@ -50,7 +45,7 @@ font-size: 2em;
 
 export const OuterContent = styled.div`
 font-size: 32px;
-color: #000000;
+color: #fff;
 `;
 
 export const CollapsableDivContainer = styled.div`

@@ -11,6 +11,7 @@ margin-left: 25px;
 margin-right: 25px;
 margin-bottom: 20px;
 margin-top: 25px;
+background-color: #000;
 
 -webkit-transform: scale(1.15);
 -ms-transform: scale(1.15);

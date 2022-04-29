@@ -13,7 +13,7 @@ import {
 	ImgWrapper,
 	Img,
 	ContentColumn,
-} from '../../components/Content/ContentStyles';
+} from '../../components/Content/Content.styles';
 import { GalleryPhoto } from './Gallery.styles';
 const GalleryPhoto1 = '../../../public/assets/gallery-diamond.webp';
 const Gallery = () => {
@@ -58,13 +58,12 @@ const Gallery = () => {
 
 	return (
 		<Section inverse ref={ref} id='gallery'>
-			<Container style={{ minWidth: '80vw' }}>
-				<ContentRow reverse>
+				<ContentRow>
 					<ContentColumn
 						initial={initial}
 						transition={{ delay: 0.3456, duration: 0.3456 }}
 						animate={animation}
-					>						<TextWrapper>
+					>						
 							<TopLine
 								initial={initial}
 								transition={{ delay: 0.3456, duration: 0.3456 }}
@@ -83,7 +82,6 @@ const Gallery = () => {
 							</Heading>
 							
 
-						</TextWrapper>
 						<Heading initial={initial}
 						transition={{ delay: 0.3456, duration: 0.3456 }}
 						animate={animation}
@@ -168,7 +166,7 @@ const Gallery = () => {
 								transition={{ delay: 0.3456, duration: 0.3456 }}
 								animate={animation}
 								inverse
-							>1 – 2 people can play this game. The time limit is 2 minutes.
+							>1 to 2 people can play this game. The time limit is 2 minutes.
 							</Subtitle>
 						<ContentRow style={{ padding: 2.55, display: 'block' }}>
 							
@@ -188,7 +186,6 @@ const Gallery = () => {
 
 					</ContentColumn>
 				</ContentRow>
-			</Container>
 		</Section >
 	)
 

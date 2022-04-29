@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content } from '../components/Content/Content';
+import { Content } from '../components/Content/Content.component';
 import Features from '../components/Features/Features';
 import Header from '../components/Header/Header.component';
 import EscapeRoomsCarousel from '../components/EscapeRoomsCarousel/Carousel.component';

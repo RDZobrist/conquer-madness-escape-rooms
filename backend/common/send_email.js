@@ -17,7 +17,9 @@ module.exports.mail = async function mail(mailDetails) {
             console.log('Error Occurs', err);
         } else {
             console.log('Email sent successfully');
+              return data
+            }
         }
-    });
+    );
 };
 
