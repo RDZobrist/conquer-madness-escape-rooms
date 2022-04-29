@@ -28,12 +28,18 @@ app.use(cors(corsOpts));
 
 app.post('/send-email',(req, res)=>{
     let {name, phoneNumber, customerEmail, emailBody} = req.body;
-    let mailDetails = {
-        to: ['data@conquerescaperooms.com', 'rddzobrist@gmail.com'],
+    let mailDetailsToConquer = {
+        to: 'info@conquerescaperooms.com',
         subject: 'Customer Request For Information',
         html: `<h6>Customer Name: ${name}</h6><br/><h6>Customer Email: ${customerEmail}</h6><br/><h6>Customer Phone #: ${phoneNumber}</h6><br/><h6>Customer Message: ${emailBody}</h6><br/>`
+    };
+    let mailDetailsToCustomer = {
+        to: customerEmail,
+        subject: 'Customer Request For Information',
+        html: `<h4>Thank you</h4><br/><p>We have received your information, and we will be back to you as soon as possible. Have a great day!</p>`
     }
-    mail.mail(mailDetails);
+    mail.mail(mailDetailsToConquer);
+    mail.mail(mailDetailsToCustomer)
      res.status(200).json({ success: `Email sent successfully`})
 });
 

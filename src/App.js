@@ -9,9 +9,7 @@ const Home = lazy(() => import('./screens/Home'));
 const Gallery = lazy(() => import('./screens/Gallery/Gallery.screen'));
 const BirthdayParties = lazy(() => import('./screens/BirthdayParties/BirthdayParties.screen'));
 const FAQs = lazy(() => import('./screens/FAQ/FAQ.screen'));
-const CorporateEvents = lazy(() => import('./screens/CorporateEvents/CorporateEvents.screen'));
 const Contact = lazy(() => import('./screens/Contact/Contact.screen'));
-const SpecialEvents = lazy(() => import('./screens/SpecialEvents/SpecialEvents.screen'));
 
 function App() {
 	return (
@@ -27,7 +25,6 @@ function App() {
 
 				<Route exact path='/birthday-parties' component={BirthdayParties } />
 				<Route exact path='/contact' component={Contact} />
-				<Route exact path='/corporate-events' component={CorporateEvents} />
 				<Route exact path='/faq' component={FAQs} />
 				<Route path='/book-now' component={() => { 
      				   window.location.href = 'https://airmadnesspos.com/airmadness/onlinesales1/tickets1.php'; 

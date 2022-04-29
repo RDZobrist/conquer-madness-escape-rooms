@@ -7,11 +7,11 @@ module.exports.mail = async function mail(mailDetails) {
         port: 443,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'info@conquerescaperooms.com', // generated ethereal user
-            pass: 'Thi$i$apa$$word10141974', // generated ethereal password
+            user: 'data@conquerescaperooms.com', // generated ethereal user
+            pass: 'P3ni$10141974', // generated ethereal password
         },
     });
-    mailDetails.from = 'info@conquerescaperooms.com';
+    mailDetails.from = 'data@conquerescaperooms.com';
     mailTransporter.sendMail(mailDetails, function (err, data) {
         if (err) {
             console.log('Error Occurs', err);
