@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
-import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton } from './Header.styles';
+import { HeaderVideo, HeaderSection, HeaderText, ButtonWrapper, HeaderButton } from './Header.styles';
 
-const Hero = () => {
+const Header = () => {
 	const [bookNowURL] = useState('https://airmadnesspos.com/airmadness/onlinesales1/tickets1.php');
 
   const handleBookNowClick = () => {
@@ -16,23 +16,23 @@ const Hero = () => {
     return null;
   };
 	return (
-		<HeroSection>
-			<HeroVideo src="./assets/conquerBEST.mp4" autoPlay muted loop />
+		<HeaderSection>
+			<HeaderVideo src="./assets/conquerBEST.mp4" autoPlay muted loop />
 			<Container>
-				<HeroText>
+				<HeaderText>
 					SOUTH DAKOTA'S PREMIER ESCAPE ROOMS<br/>
 					Hollywood Quality Set Designs & Special Effects<br/>
-				</HeroText>
+				</HeaderText>
 				<ButtonWrapper>
 					
-					<HeroButton onClick={handlePhoneNumberClick}>(605) 702-4243</HeroButton>
+					<HeaderButton onClick={handlePhoneNumberClick}>(605) 702-4243</HeaderButton>
 					<Link to="signup">
 						<Button onClick={handleBookNowClick}>Book an Escape Room Now</Button>
 					</Link>
 				</ButtonWrapper>
 			</Container>
-		</HeroSection>
+		</HeaderSection>
 	);
 };
 
-export default Hero;
+export default Header;

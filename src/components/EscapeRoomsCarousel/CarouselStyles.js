@@ -22,14 +22,18 @@ transition: transform 0.5s, opacity 0.5s;
 
 
 export const ImageWrapper = styled.div`
-	width: 190%;
+	width: 33vw;
 	display: flex !important;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	border-radius: 10px;
 	outline: none;
-	height: 100vh;
+	height: 120vh;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+
 
 	@media screen and (min-width: 440px) {
 		border: 1px solid #bebebe;
@@ -78,7 +82,7 @@ export const CardButton = styled.button`
 	padding: 5px 10px;
 	color: #fff;
 	cursor: pointer;
-	width: 100%;
+	width: 112.5%;
 	font-weight: 600;
 	margin: auto 0 0 0;
 	border: none;
@@ -120,4 +124,10 @@ border-radius: 10px;
 max-width: 300px;
 margin: auto;
 }
+`;
+
+export const CarouselStatsContainer = styled.div`
+display: inline-block;
+padding: 10px;
+margin-bottom: 10px;
 `;

@@ -1,99 +1,135 @@
-import React, { useState } from 'react'
-import { useHistory } from "react-router-dom";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import Input from '../../components/Input/Input.component';
-import { Container, Section } from '../../globalStyles';
-import { Button } from './Contact.styles'
-const ContactScreen = () => {
-    const [customerEmail, setCustomerEmail] = useState('');
-    const [emailBody, setEmailBody] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+import {
+	FormColumn,
+	FormWrapper,
+	FormInput,
+	FormSection,
+	FormRow,
+	FormLabel,
+	FormInputRow,
+	FormMessage,
+	FormButton,
+	FormTitle,
+} from './Contact.styles';
+import { Container } from '../../globalStyles';
+import validateForm from './validateForm';
 
-    const [name, setName] = useState('');
+const Contact = () => {
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [phoneNumber, setPhoneNumber] = useState('');
+	const [messageBody, setMessageBody] = useState('');
+	const [error, setError] = useState(null);
+	const [success, setSuccess] = useState(null);
 
-    const handleCustomerEmailChange = event => {
-        let { value } = event.target;
-        setCustomerEmail(value)
-    }
-    const handlePhoneNumberChange = event => {
-        let { value } = event.target;
-        setPhoneNumber(value)
-    }
-    const handleEmailBodyChange = event => {
-        let { value } = event.target;
-        setEmailBody(value)
-    }
-    const handleNameChange = event => {
-        let { value } = event.target;
-        setName(value)
-    }
-    let history = useHistory();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const resultError = validateForm({ name, email, phoneNumber, messageBody });
 
-    const sendEmail = async (customerEmail, emailBody, phoneNumber, name) => {
-        await axios.post('http://localhost:3201/send-email', {
-            customerEmail,
-            emailBody,
-            phoneNumber,
-            name
-        })
-            .then(function (response) {
-                if(response.data.success === 'Email sent successfully'){
-                    alert('Email sent to Conquer Escape Rooms successfully')
-history.push('/')                }
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+		if (resultError !== null) {
+			setError(resultError);
+			return;
+		}
+		setName('');
+		setEmail('');
+		setPhoneNumber('');
+		setMessageBody('');
+		setError(null);
+		setSuccess('Your message was submitted to Conquer Escape Rooms!');
+	};
 
-    }
+	const messageVariants = {
+		hidden: { y: 30, opacity: 0 },
+		animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
+	};
 
-    return (
-        <Section inverse reverse style={{ marginTop: '20vh', alignContent: 'center' }}>
-            <Container>
-                <Input
-                    name='email'
-                    type='email'
-                    handleChange={handleCustomerEmailChange}
-                    value={customerEmail}
-                    label='Email'
-                    autoComplete="on"
-                    required
+	const formData = [
+		{ label: 'Name', value: name, onChange: (e) => setName(e.target.value), type: 'text' },
+		{ label: 'Email', value: email, onChange: (e) => setEmail(e.target.value), type: 'email' },
+		{
+			label: 'Phone Number',
+			value: phoneNumber,
+			onChange: (e) => setPhoneNumber(e.target.value),
+			type: 'tel',
+		},
+		{
+			label: 'Questions, Comments, Concerns',
+			value: messageBody,
+			onChange: (e) => setMessageBody(e.target.value),
+			type: null,
+		},
+	];
+	let history = useHistory();
 
-                />
-            </Container>
-            <Container>
-                <Input
-                    name='name'
-                    type='name'
-                    handleChange={handleNameChange}
-                    value={name}
-                    label='Name'
-                    autoComplete="on"
-                    required
+	const sendEmail = async (customerEmail, emailBody, phoneNumber, name) => {
+		await axios.post('http://localhost:3201/send-email', {
+			customerEmail,
+			emailBody,
+			phoneNumber,
+			name
+		})
+			.then(function (response) {
+				if (response.data.success === 'Email sent successfully') {
+					alert('Email sent to Conquer Escape Rooms successfully')
+					history.push('/')
+				}
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 
-                />
-            </Container>
-            <Container>
-                <Input
-                    name='phone'
-                    type='number'
-                    handleChange={handlePhoneNumberChange}
-                    value={phoneNumber}
-                    label='Phone Number'
-                    autoComplete="on"
-                    required
-                />
+	}
+	return (
+		<FormSection >
+			<Container>
+				<FormRow>
+					<FormColumn small>
+						<FormTitle>We Can't Wait To Hear From You</FormTitle>
+						<FormWrapper onSubmit={handleSubmit}>
+							{formData.map((el, index) => (
+								<FormInputRow key={index}>
+									<FormLabel>{el.label}</FormLabel>
+									{el.type === null ? <textarea onChange={el.onChange} placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
+										value={el.value} rows="10" cols="70" />
+										:
+										<FormInput
+											type={el.type}
+											placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
+											value={el.value}
+											onChange={el.onChange}
+										/>
+									}
+								</FormInputRow>
+							))}
 
-            </Container>
-            <Container>
-
-                <Input handleChange={handleEmailBodyChange} placeholder={'Your Message Here'} label={'Questions, Comments, Concerns'} shrink textArea />
-            </Container>
-            <Container>
-
-                <Button style={{ marginLeft: '28vw' }} inverse fontBig onClick={() => sendEmail(customerEmail, emailBody, phoneNumber, name)}>send email</Button>
-            </Container>
-        </Section>
-    )
+							<FormButton type="submit" onClick={()=>sendEmail(email, messageBody, phoneNumber, name)}>Submit</FormButton>
+						</FormWrapper>
+						{error && (
+							<FormMessage
+								variants={messageVariants}
+								initial="hidden"
+								animate="animate"
+								error
+							>
+								{error}
+							</FormMessage>
+						)}
+						{success && (
+							<FormMessage
+								variants={messageVariants}
+								initial="hidden"
+								animate="animate"
+							>
+								{success}
+							</FormMessage>
+						)}
+					</FormColumn>
+				</FormRow>
+			</Container>
+		</FormSection>
+	);
 };
-export default ContactScreen;
+
+export default Contact;

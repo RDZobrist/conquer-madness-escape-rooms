@@ -125,11 +125,11 @@ export const escape_rooms_data = [
 		subTitle: 'Gen 3 Escape Room',
 		bullets: ['2 to 10 players', 'Your team will be split into 2 to 4 seperate cells at the start of the experience based on your group size.', 'Time Limit: 60 minutes', 'Adult Admission: $31.99', 'Kids Admission (8-12 years old): $22.99', 'Taxes and Fees not included'],
 		description: 'Welcome to Conquer Penitentiary, you & your friends were sentenced to death for a crime you did not commit! Now is the time to devise an escape plan to get yourselves out of prison. The warden will return in one hour to execute you, do you have what it takes to pull off the ultimate escape?',
-		stats: {
-			difficulty: 7,
-			physical: 4,
-			escape_rate: 3.9
-		},
+	
+			difficulty: 70,
+			physical: 40,
+			escape_rate: 39,
+		
 		images: ['gallery-photo-18.webp', 'gallery-photo-19.webp', 'gallery-photo-20.webp', 'gallery-photo-21.webp', 'gallery-photo-22.webp', 'gallery-photo-23.webp']
 
 	},
@@ -138,11 +138,11 @@ export const escape_rooms_data = [
 		subTitle: 'Gen 4 Escape Room',
 		bullets: ['4 to 12 players', 'Time Limit: 60 minutes', 'Admission: $31.99', 'Recommended age is 16+ unless accompanied by an adult. (Parent Discretion Advised)', 'Taxes and Fees not included'],
 		description: 'A zombie apocalypse has taken over the city, you & your team of military soliders got left behind during the chaos of the evacuation. You\'ve been survivng in the shadows, battling zombies & doing everything you can to survive.  After months of searching for the rendezvouz point you finally find it. You were hoping for an extraction but the Zombie Elite Task Force has another mission for you & your team. You\'ll need to go to the main core of the city, locate the research facility where the infection started & retrieve the antidote! You only have one hour to complete the mission, WILL YOU SURVIVE ?',
-		stats: {
-			difficulty: 9,
-			physical: 3,
-			escape_rate: 2.5
-		},
+		
+			difficulty: 90,
+			physical: 30,
+			escape_rate: 25,
+		
 		images: ['gallery-photo-12.webp', 'gallery-photo-14.webp', 'gallery-photo-13.webp', 'gallery-photo-15.webp', 'gallery-photo-16.webp', 'gallery-photo-17.webp']
 
 	},
@@ -152,9 +152,9 @@ export const escape_rooms_data = [
 		bullets: ['2 to 12 players', 'Time Limit: 60 minutes', 'Adult Admission: $31.99', 'Kid\'s Admission(8-12 years old): $22.99', 'Taxes and Fees not included'],
 		description: 'You and your team of archaeologists are investigating an urban legend deep in the jungles of Central America. With the help of your local guide, you have located an abandoned mine the you believe will lead you to a lost Aztec temple. This temple is rumored to hold a diamond that was once believed to have belonged to the gods. Unfortunately, you are tipped off by a local villager that there is another team of archaeologists pursuing the diamond. You must quickly make your way down into the abandoned mineshaft and be the first to discover what secrets lie below.',
 
-		difficulty: 8,
-		physical: 7,
-		escape_rate: 3.5,
+		difficulty: 80,
+		physical: 70,
+		escape_rate: 35,
 		
 		images: ['gallery-photo-23.webp', 'gallery-photo-2.webp', 'gallery-photo-1.webp', 'gallery-photo-3.webp', 'gallery-photo-4.webp', 'gallery-photo-5.webp']
 

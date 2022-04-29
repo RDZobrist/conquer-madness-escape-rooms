@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Button } from '../../globalStyles';
 
-export const HeroSection = styled.section`
+export const HeaderSection = styled.section`
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	padding-top: clamp(70px, 25vh, 220px);
-	margin-bottom: 100vh;
+	margin-bottom: 10vh;
 	box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 	@media screen and (max-width: 400px) {
 		max-width: 400px;
@@ -14,7 +14,7 @@ export const HeroSection = styled.section`
 	}
 `;
 
-export const HeroVideo = styled.video`
+export const HeaderVideo = styled.video`
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
@@ -27,7 +27,7 @@ export const HeroVideo = styled.video`
 	}
 `;
 
-export const HeroText = styled.p`
+export const HeaderText = styled.p`
 	margin-top: 44vh;
 	margin-bottom: 35px;
 	font-size: 2.80em;
@@ -53,7 +53,7 @@ export const ButtonWrapper = styled.div`
 	gap: 0.5rem;
 `;
 
-export const HeroButton = styled(Button)`
+export const HeaderButton = styled(Button)`
 	color: black;
 
 	&:before {

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import { Container, Section } from '../../globalStyles';
 import {
 	ContentRow,
@@ -14,7 +15,6 @@ import {
 
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
-import { heroThree } from '../../data/ContetData';
 
 export const Content = ({
 	topLine,
@@ -27,11 +27,15 @@ export const Content = ({
 	primary,
 	inverse,
 	elID, 
-	hours
+	hours,
+	to
+	
 	
 }) => {
 	const initial = { opacity: 0, y: 30 };
 	const animation = useAnimation();
+	let history = useHistory();
+	let location = useLocation();
 
 	const { ref, inView } = useInView({ threshold: 0.2 });
 	const  NewlineText= props => {
@@ -46,15 +50,27 @@ export const Content = ({
 			});
 		}
 	}, [inView, animation]);
-	const scrollTo = id => {
-		const element = document.getElementById(id);
+	const scrollTo = elID => {
+		
+		const element = document.getElementById(elID);
 
 		element.scrollIntoView({
 			behavior: 'smooth',
 		});
 	};
+	const verifyScrollOrReroute = (to, elID) => {
+			
+		if ((elID === 'book_now') && (location.pathname === '/'))  {
+			history.push(to);
+
+		}
+
+		scrollTo(elID);
+	};
+
+	
 	return (
-		<Section inverse={inverse} id={elID} ref={ref}>
+		<Section inverse={inverse} ref={ref}>
 			<Container>
 				<ContentRow reverse={reverse}>
 					<ContentColumn>
@@ -96,29 +112,17 @@ export const Content = ({
 								<NewlineText text={description} />
 							</Subtitle>
 							}
-							{elID ?
+							
 						<ContentButton
 							initial={initial}
 							transition={{ delay: .777, duration: 0.666 }}
 							animate={animation}
 							inverse={inverse}
 							primary={primary}
-							onClick={()=>{scrollTo(elID)}}
+							onClick={()=>verifyScrollOrReroute(to, elID)}
 
 						>{buttonLabel}
-						</ContentButton>:	
-						<a href="https://airmadnesspos.com/airmadness/onlinesales1/tickets1.php">
-									<ContentButton
-										initial={initial}
-										transition={{ delay: .777, duration: 0.666 }}
-										animate={animation}
-										inverse={inverse}
-										primary={primary}
-
-									>
-										Book an Escape Room Today
-							</ContentButton>
-							</a>}
+						</ContentButton>
 					</TextWrapper>
 				</ContentColumn>
 				<ContentColumn

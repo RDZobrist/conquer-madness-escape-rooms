@@ -10,11 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use((request, response, next) => {
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Content-Type");
-    next();
-  });
+
 const corsOpts = {
     origin: '*',
 
@@ -38,10 +34,7 @@ app.post('/send-email',(req, res)=>{
         html: `<h6>Customer Name: ${name}</h6><br/><h6>Customer Email: ${customerEmail}</h6><br/><h6>Customer Phone #: ${phoneNumber}</h6><br/><h6>Customer Message: ${emailBody}</h6><br/>`
     }
     mail.mail(mailDetails);
-    return res.status(200).json({ success: `Email sent successfully`})
-    .catch(err => {
-        return res.status(400).json({ errors: err });
-    })
+     res.status(200).json({ success: `Email sent successfully`})
 });
 
 app.get('/', (req, res) => {

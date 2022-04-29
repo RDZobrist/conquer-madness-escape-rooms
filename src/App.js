@@ -29,7 +29,10 @@ function App() {
 				<Route exact path='/contact' component={Contact} />
 				<Route exact path='/corporate-events' component={CorporateEvents} />
 				<Route exact path='/faq' component={FAQs} />
-				<Route exact path='/special-events' component={SpecialEvents} />
+				<Route path='/book-now' component={() => { 
+     				   window.location.href = 'https://airmadnesspos.com/airmadness/onlinesales1/tickets1.php'; 
+					   return null; 
+				}}/>
 			</Switch>
 			<Footer />
 

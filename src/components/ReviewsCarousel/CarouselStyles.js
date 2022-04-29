@@ -8,21 +8,7 @@ export const CarouselImage = styled.img`
 	object-fit: cover;
 	vertical-align: middle;
 `;
-export const BlockQuote = styled.blockquote`
-padding: 2%;
-font-style: italic;
-line-height: 145%;
-position: relative;
-margin-top: 40px;
-&:before {
-	content: ${()=>{(<span>&#x201c;</span>)}};
-    font-size: 500%;
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-}
-`;
+
 
 export const ImageWrapper = styled.div`
 	width: 90%;
@@ -98,9 +84,8 @@ font-size: 1.3rem;
 padding: 5px 10px;
 color: #1d609c;
 cursor: pointer;
-width: 100%;
+width: 12.5vw;
 font-weight: 600;
-margin-left: 25%;;
 border: 5px;
 border-color: #1d609c;
 border-radius: 10px;
@@ -112,9 +97,9 @@ border-radius: 10px;
 }
 @media screen and (min-width: 1350px) {
 	display; flex;
-	min-width: 250px;
-	margin-left: 15.75vw;
-
+	min-width: 12.5vw;
+	margin: auto 26.75vw;
+	align-self: center;
 }
 @media screen and (max-width: 400px) {
 max-width: 300px;

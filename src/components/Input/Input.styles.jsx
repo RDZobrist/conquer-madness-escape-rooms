@@ -17,7 +17,7 @@ export const GroupContainer = styled.div`
   }
 `;
 export const TextArea = styled.textarea`
-width: 75%;
+width: 50%;
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;

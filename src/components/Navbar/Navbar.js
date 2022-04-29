@@ -35,7 +35,8 @@ const Navbar = () => {
 	};
 
 	const closeMobileMenu = (to, id, page, section) => {
-		if (section && !page) {
+			
+		if ((id && location.pathname === '/') && section && !page) {
 			scrollTo(id);
 		}
 

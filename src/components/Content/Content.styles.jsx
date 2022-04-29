@@ -108,9 +108,8 @@ export const ContentButton = styled(motion.button)`
 	letter-spacing: 1.54px;
 	text-transform: uppercase;
 	cursor: pointer;
-	background-color: '#0c4577';
+	background: none;
 	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
-
 	border-radius: 4px;
 	white-space: nowrap;
 	padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
@@ -120,7 +119,6 @@ export const ContentButton = styled(motion.button)`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-
 	&:before {
 		background: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
 		content: '';
@@ -134,11 +132,9 @@ export const ContentButton = styled(motion.button)`
 		height: 0%;
 		transform: translate(-50%, -50%) rotate(45deg);
 	}
-
 	&:hover:before {
 		height: 500%;
 	}
-
 	&:hover {
 		color: ${({ inverse }) => (inverse ? 'white' : 'black')};
 	}

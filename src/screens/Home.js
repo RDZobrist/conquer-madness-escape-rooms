@@ -5,7 +5,7 @@ import Header from '../components/Header/Header.component';
 import EscapeRoomsCarousel from '../components/EscapeRoomsCarousel/Carousel.component';
 import { sectionOne, sectionTwo, sectionThree, sectionFour } from '../data/ContetData';
 import ReviewsCarousel from '../components/ReviewsCarousel/Carousel.component';
-// Hero Feature Content Carousel
+// Header Feature Content Carousel
 
 const Home = () => {
 	return (
